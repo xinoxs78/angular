@@ -1,0 +1,12 @@
+<div class="form-inline">
+  <div class="form-group">
+    <label>{{label}}</label>
+    <div class="radio" *ngFor="let option of modelOptions">
+      <input type="radio" [attr.id]="option.id" [attr.name]="name" [attr.value]="option.value" (change)="onChange($event)" (focus)="onFocus($event)"
+        (blur)="onBlur($event)" [disabled]="isReadonly">
+        <label [attr.for]="option.id" *ngIf="option.text">
+        {{ option.text }}
+      </label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="form-inline">
+	<div class="form-group">
+		<label for="example">Inserisci un numero</label>
+    <input #twiceinput class="form-control"  type="text" id="twiceId" [value]="">
+  </div>
+  <div class="form-group" style="margin-top:30px" >
+    <button type="button" class="btn btn-primary" (click)="twice(twiceinput.value)">Raddoppia</button>
+  </div>
+   
+
+  <!--<div class="form-group">
+      <label for="result-read-only">Risultato</label>
+      <input class="form-control" type="text" [value]="result" readonly id="result-read-only">
+  </div>-->
+
+  <p *ngIf="(result>0)">Risultato : <b>{{ result || '' }} </b></p>
+</div>
