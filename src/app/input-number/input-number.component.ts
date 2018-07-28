@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, EventEmitter, Input, Output} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'twice-number',
@@ -7,7 +7,8 @@ import { Component, OnInit, ViewEncapsulation, EventEmitter, Input, Output} from
 export class InputNumberComponent implements OnInit {
   
   result: number;
-  
+  internalValue: number;
+
   @Input()
   set value(inputValue: number) {
     this.internalValue = inputValue;
@@ -20,7 +21,7 @@ export class InputNumberComponent implements OnInit {
     }
   }
   
-  internalValue = 0;
+
 
   constructor() { }
 
